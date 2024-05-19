@@ -1,10 +1,11 @@
+using Content.Server.Corvax.Language;
 using Content.Shared.Chat;
 using Content.Shared.Radio;
 
 namespace Content.Server.Radio;
 
 [ByRefEvent]
-public readonly record struct RadioReceiveEvent(string Message, EntityUid MessageSource, RadioChannelPrototype Channel, MsgChatMessage ChatMsg);
+public readonly record struct RadioReceiveEvent(LanguageMessage Message, EntityUid MessageSource, RadioChannelPrototype Channel, MsgChatMessage ChatMsg, EntityUid RadioSource, MsgChatMessage? LanguageChatMsg);
 
 /// <summary>
 /// Use this event to cancel sending message per receiver

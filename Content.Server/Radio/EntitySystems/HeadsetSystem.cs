@@ -1,4 +1,5 @@
 using Content.Server.Chat.Systems;
+using Content.Server.Corvax.Language.EntitySystems;
 using Content.Server.Emp;
 using Content.Server.Radio.Components;
 using Content.Shared.Inventory.Events;
@@ -14,6 +15,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly LanguageSystem _language = default!;
 
     public override void Initialize()
     {
@@ -99,8 +101,10 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 
     private void OnHeadsetReceive(EntityUid uid, HeadsetComponent component, ref RadioReceiveEvent args)
     {
-        if (TryComp(Transform(uid).ParentUid, out ActorComponent? actor))
-            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+        var listener = Transform(uid).ParentUid;
+
+        if (TryComp(listener, out ActorComponent? actor))
+            _netMan.ServerSendMessage(_language.IsUnderstandLanguage(listener, args.Message) ? args.ChatMsg : args.LanguageChatMsg!, actor.PlayerSession.Channel);
     }
 
     private void OnEmpPulse(EntityUid uid, HeadsetComponent component, ref EmpPulseEvent args)

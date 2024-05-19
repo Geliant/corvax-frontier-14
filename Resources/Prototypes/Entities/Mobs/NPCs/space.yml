@@ -43,7 +43,7 @@
     bloodReagent: Cryoxadone
   - type: CombatMode
   - type: TimedDespawn
-    lifetime: 400
+    lifetime: 1200
   - type: Temperature
     heatDamageThreshold: 500
     coldDamageThreshold: 0
@@ -173,8 +173,8 @@
   - type: Strippable
   - type: UserInterface
     interfaces:
-    - key: enum.StrippingUiKey.Key
-      type: StrippableBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
 
 - type: entity
   id: MobKangarooSpaceSalvage
@@ -265,6 +265,7 @@
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
+    allowedEmotes: ['Click', 'Chitter']
   - type: Vocal
     sounds:
       Male: UnisexArachnid
