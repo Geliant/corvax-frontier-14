@@ -5,6 +5,8 @@
   noSpawn: true
   components:
   - type: Projectile
+    penetrationProb: 0.19  #CorvaxFrontier
+    penetrationScore: 1
     damage:
       types:
         Piercing: 19
@@ -19,3 +21,14 @@
     damage:
       types:
         Blunt: 2
+
+- type: entity
+  id: BulletCaselessRifleRubber
+  name: bullet (.25 caseless rubber)
+  parent: BaseBulletRubber
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3

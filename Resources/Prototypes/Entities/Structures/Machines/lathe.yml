@@ -198,6 +198,8 @@
       - ShellTranquilizer
       - SpeedLoaderMagnum
       - SpeedLoaderMagnumEmpty
+      - SpeedLoaderRifleHeavy # Frontier
+      - SpeedLoaderRifleHeavyEmpty # Frontier
     emagDynamicRecipes:
       - BoxBeanbag
       - BoxShotgunIncendiary
@@ -236,6 +238,8 @@
       - PowerCageSmall
       - SpeedLoaderMagnumIncendiary
       - SpeedLoaderMagnumUranium
+      - SpeedLoaderRifleHeavyIncendiary # Frontier
+      - SpeedLoaderRifleHeavyUranium # Frontier
 
 - type: entity
   id: AutolatheHyperConvection
@@ -384,12 +388,14 @@
       - ClothingOuterHardsuitRd # Frontier
       - ClothingOuterHardsuitLuxury # Frontier
       - ClothingOuterHardsuitMercenary # Frontier
+      - ClothingOuterHardsuitPrivateSecurity # Frontier
       - ClothingOuterHardsuitScaf # Frontier
       - ClothingOuterHardsuitPilot # Frontier
       - ClothingOuterHardsuitMaximPrototype # Frontier
       - ClothingHeadHelmetAncient # Frontier
       - ClothingOuterHardsuitAncientEVA # Frontier
       - JetpackMining # Corvax-Frontier
+      - ConstructionBagOfHolding # Frontier
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ExplosivePayload
@@ -522,6 +528,7 @@
       - ClothingShoesBootsJetBoots # Corvax-Frontier
       - WeaponMagmiteCrusher # Corvax-Frontier
       - WeaponMagmiteCrusherGlaive # Corvax-Frontier
+      - WeaponMagmitePlasmaCutter # Corvax-Frontier
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ExplosivePayload
@@ -563,8 +570,8 @@
     - CircuitImprinterMachineCircuitboard
     - OreProcessorMachineCircuitboard
     - MaterialReclaimerMachineCircuitboard
-    - ElectrolysisUnitMachineCircuitboard
-    - CentrifugeMachineCircuitboard
+    #- ElectrolysisUnitMachineCircuitboard Corvax-Frontier
+    #- CentrifugeMachineCircuitboard Corvax-Frontier
     - CondenserMachineCircuitBoard
     - HotplateMachineCircuitboard
     - UniformPrinterMachineCircuitboard
@@ -666,6 +673,8 @@
       - DeepFryerMachineCircuitboard # Nyano
       - SmallThrusterMachineCircuitboard # Frontier
       - SmallGyroscopeMachineCircuitboard # Frontier
+      - CentrifugeMachineCircuitboard # Corvax-Frontier
+      - ElectrolysisUnitMachineCircuitboard # Corvax-Frontier
       - JukeboxCircuitBoard
   - type: MaterialStorage
     whitelist:
@@ -912,6 +921,8 @@
       - RiotShield
       - SpeedLoaderMagnum
       - SpeedLoaderMagnumEmpty
+      - SpeedLoaderRifleHeavy # Frontier
+      - SpeedLoaderRifleHeavyEmpty # Frontier
       - Stunbaton
       - TargetClown
       - TargetHuman
@@ -958,10 +969,10 @@
       - MagazineBoxPistolUranium
       - MagazineBoxRifleIncendiary
       - MagazineBoxRifleUranium
-#      - MagazineBoxLightRifleRubber # Frontier - Restore This Later
-#      - MagazineBoxMagnumRubber # Frontier - Restore This Later
-#      - MagazineBoxPistolRubber # Frontier - Restore This Later
-#      - MagazineBoxRifleRubber # Frontier - Restore This Later
+      - MagazineBoxLightRifleRubber # Frontier
+      - MagazineBoxMagnumRubber # Frontier
+      - MagazineBoxPistolRubber # Frontier
+      - MagazineBoxRifleRubber # Frontier
       - MagazineGrenadeEmpty
       - MagazineLightRifleIncendiary
       - MagazineLightRifleUranium
@@ -984,6 +995,8 @@
       - SignalTrigger
       - SpeedLoaderMagnumIncendiary
       - SpeedLoaderMagnumUranium
+      - SpeedLoaderRifleHeavyIncendiary # Frontier
+      - SpeedLoaderRifleHeavyUranium # Frontier
       - TelescopicShield
       - TimerTrigger
       - Truncheon
@@ -1032,6 +1045,10 @@
         - MagazineVector45Empty
         - MagazineBoxVector45
         - MagazineBoxVector22
+        - MagazinePistolSubMachineGun
+        - MagazinePistolSubMachineGunEmpty
+        - MagazinePistolSubMachineGunTopMounted
+        - MagazinePistolSubMachineGunTopMountedEmpty
         - BoxLethalshot
         - BoxShotgunFlare
         - BoxShotgunSlug
@@ -1051,6 +1068,8 @@
         - ShellTranquilizer
         - SpeedLoaderMagnum
         - SpeedLoaderMagnumEmpty
+        - SpeedLoaderRifleHeavy # Frontier
+        - SpeedLoaderRifleHeavyEmpty # Frontier
     - type: MaterialStorage
       whitelist:
         tags:
